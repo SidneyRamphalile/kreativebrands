@@ -47,14 +47,33 @@ const Home = () => {
         <h3 className="text-3xl font-bold text-gray-800 mb-6">
           Our Signage Services
         </h3>
+
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
-            "Shopfront Signs",
-            "Vehicle Branding",
-            "Posters & Banners",
-            "Canvas Printing",
-            "LED Lightboxes",
-            "Window Decals",
+            {
+              title: "Shopfront Signs",
+              image: "/src/assets/Free-Light-Wood-Storefront-Mockup-02.jpg",
+            },
+            {
+              title: "Vehicle Branding",
+              image: "/src/assets/free-vehicle-mockup-536x0-c-default.jpg",
+            },
+            {
+              title: "Posters & Banners",
+              image: "/src/assets/5-Free-X-Stand-Banner-Stand-Mockup-PSD-Files2.jpg",
+            },
+            {
+              title: "Canvas Printing",
+              image: "/src/assets/free-art-canvas-frame-mockup-psd-536x0-c-default.jpg",
+            },
+            {
+              title: "LED Lightboxes",
+              image: "/src/assets/Free-Lightbox-Digital-Screen-Poster-Mockup-PSD.jpg",
+            },
+            {
+              title: "Window Decals",
+              image: "/src/assets/Free-Restaurant-Window-Sign-Decal-Mockup-PSD.jpg",
+            },
           ].map((service, index) => (
             <div
               key={index}
@@ -63,8 +82,16 @@ const Home = () => {
               data-aos-delay={700 + index * 100}
             >
               <h4 className="text-xl font-semibold text-indigo-700 mb-2">
-                {service}
+                {service.title}
               </h4>
+
+              {/* Image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-40 object-cover rounded mb-3"
+              />
+
               <p className="text-gray-600 text-sm">
                 High-quality, durable, and designed to make your brand stand
                 out.
