@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import MarqueeScroller from "../components/MarqueeScroller";
 import ContactUs from "../components/ContactUs";
 
 const Home = () => {
+  const contactRef = useRef(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       {/* Hero Image Slider */}
@@ -81,7 +87,6 @@ const Home = () => {
           A glimpse into the signs we've proudly created.
         </p>
         <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          {/* Replace with real image paths */}
           <img
             src="/sample1.jpg"
             alt="Project 1"
@@ -155,13 +160,16 @@ const Home = () => {
         <p className="mb-4">
           Fast turnaround, premium quality, and unbeatable service.
         </p>
-        <button className="bg-white text-indigo-700 font-semibold py-2 px-6 rounded hover:bg-gray-200 transition">
+        <button
+          onClick={scrollToContact}
+          className="bg-white text-indigo-700 font-semibold py-2 px-6 rounded hover:bg-gray-200 transition"
+        >
           Request a Quote
         </button>
       </div>
 
       {/* Contact Us Section */}
-      <div data-aos="fade-up" data-aos-delay="350" id="contact">
+      <div data-aos="fade-up" data-aos-delay="350" ref={contactRef}>
         <ContactUs />
       </div>
     </div>
