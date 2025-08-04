@@ -3,6 +3,25 @@ import HeroCarousel from "../components/HeroCarousel";
 import MarqueeScroller from "../components/MarqueeScroller";
 import ContactUs from "../components/ContactUs";
 
+// Services images
+import shopfrontImg from "../assets/Free-Light-Wood-Storefront-Mockup-02.jpg";
+import vehicleBrandingImg from "../assets/free-vehicle-mockup-536x0-c-default.jpg";
+import bannersImg from "../assets/5-Free-X-Stand-Banner-Stand-Mockup-PSD-Files2.jpg";
+import canvasImg from "../assets/free-art-canvas-frame-mockup-psd-536x0-c-default.jpg";
+import lightboxImg from "../assets/Free-Lightbox-Digital-Screen-Poster-Mockup-PSD.jpg";
+import windowDecalsImg from "../assets/Free-Restaurant-Window-Sign-Decal-Mockup-PSD.jpg";
+
+// Project images
+import project1 from "../assets/project1.jpg";
+import project2 from "../assets/project2.jpeg";
+import project3 from "../assets/project3.jpeg";
+import project4 from "../assets/project4.jpeg";
+import project5 from "../assets/project5.jpeg";
+import project6 from "../assets/project6.jpeg";
+import project7 from "../assets/project7.jpeg";
+import project8 from "../assets/project8.jpg";
+import project9 from "../assets/project9.jpeg";
+
 const Home = () => {
   const contactRef = useRef(null);
 
@@ -50,34 +69,12 @@ const Home = () => {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
-            {
-              title: "Shopfront Signs",
-              image: "/src/assets/Free-Light-Wood-Storefront-Mockup-02.jpg",
-            },
-            {
-              title: "Vehicle Branding",
-              image: "/src/assets/free-vehicle-mockup-536x0-c-default.jpg",
-            },
-            {
-              title: "Posters & Banners",
-              image:
-                "/src/assets/5-Free-X-Stand-Banner-Stand-Mockup-PSD-Files2.jpg",
-            },
-            {
-              title: "Canvas Printing",
-              image:
-                "/src/assets/free-art-canvas-frame-mockup-psd-536x0-c-default.jpg",
-            },
-            {
-              title: "LED Lightboxes",
-              image:
-                "/src/assets/Free-Lightbox-Digital-Screen-Poster-Mockup-PSD.jpg",
-            },
-            {
-              title: "Window Decals",
-              image:
-                "/src/assets/Free-Restaurant-Window-Sign-Decal-Mockup-PSD.jpg",
-            },
+            { title: "Shopfront Signs", image: shopfrontImg },
+            { title: "Vehicle Branding", image: vehicleBrandingImg },
+            { title: "Posters & Banners", image: bannersImg },
+            { title: "Canvas Printing", image: canvasImg },
+            { title: "LED Lightboxes", image: lightboxImg },
+            { title: "Window Decals", image: windowDecalsImg },
           ].map((service, index) => (
             <div
               key={index}
@@ -88,14 +85,11 @@ const Home = () => {
               <h4 className="text-xl font-semibold text-red-600 mb-2">
                 {service.title}
               </h4>
-
-              {/* Image */}
               <img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-40 object-cover rounded mb-3"
               />
-
               <p className="text-gray-600 text-sm">
                 High-quality, durable, and designed to make your brand stand
                 out.
@@ -120,15 +114,15 @@ const Home = () => {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
-            { src: "/src/assets/project1.jpg", alt: "Project 1", delay: 1100 },
-            { src: "/src/assets/project2.jpeg", alt: "Project 2", delay: 1200 },
-            { src: "/src/assets/project3.jpeg", alt: "Project 3", delay: 1300 },
-            { src: "/src/assets/project4.jpeg", alt: "Project 4", delay: 1400 },
-            { src: "/src/assets/project5.jpeg", alt: "Project 5", delay: 1500 },
-            { src: "/src/assets/project6.jpeg", alt: "Project 6", delay: 1600 },
-            { src: "/src/assets/project7.jpeg", alt: "Project 7", delay: 1700 },
-            { src: "/src/assets/project8.jpg", alt: "Project 8", delay: 1800 },
-            { src: "/src/assets/project9.jpeg", alt: "Project 9", delay: 1900 },
+            { src: project1, alt: "Project 1", delay: 1100 },
+            { src: project2, alt: "Project 2", delay: 1200 },
+            { src: project3, alt: "Project 3", delay: 1300 },
+            { src: project4, alt: "Project 4", delay: 1400 },
+            { src: project5, alt: "Project 5", delay: 1500 },
+            { src: project6, alt: "Project 6", delay: 1600 },
+            { src: project7, alt: "Project 7", delay: 1700 },
+            { src: project8, alt: "Project 8", delay: 1800 },
+            { src: project9, alt: "Project 9", delay: 1900 },
           ].map((project, index) => (
             <div
               key={index}
