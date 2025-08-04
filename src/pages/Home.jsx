@@ -60,19 +60,23 @@ const Home = () => {
             },
             {
               title: "Posters & Banners",
-              image: "/src/assets/5-Free-X-Stand-Banner-Stand-Mockup-PSD-Files2.jpg",
+              image:
+                "/src/assets/5-Free-X-Stand-Banner-Stand-Mockup-PSD-Files2.jpg",
             },
             {
               title: "Canvas Printing",
-              image: "/src/assets/free-art-canvas-frame-mockup-psd-536x0-c-default.jpg",
+              image:
+                "/src/assets/free-art-canvas-frame-mockup-psd-536x0-c-default.jpg",
             },
             {
               title: "LED Lightboxes",
-              image: "/src/assets/Free-Lightbox-Digital-Screen-Poster-Mockup-PSD.jpg",
+              image:
+                "/src/assets/Free-Lightbox-Digital-Screen-Poster-Mockup-PSD.jpg",
             },
             {
               title: "Window Decals",
-              image: "/src/assets/Free-Restaurant-Window-Sign-Decal-Mockup-PSD.jpg",
+              image:
+                "/src/assets/Free-Restaurant-Window-Sign-Decal-Mockup-PSD.jpg",
             },
           ].map((service, index) => (
             <div
@@ -113,28 +117,32 @@ const Home = () => {
         <p className="text-gray-600 mb-6">
           A glimpse into the signs we've proudly created.
         </p>
-        <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          <img
-            src="/sample1.jpg"
-            alt="Project 1"
-            className="rounded shadow-md object-cover h-60 w-full"
-            data-aos="flip-left"
-            data-aos-delay="1100"
-          />
-          <img
-            src="/sample2.jpg"
-            alt="Project 2"
-            className="rounded shadow-md object-cover h-60 w-full"
-            data-aos="flip-left"
-            data-aos-delay="1200"
-          />
-          <img
-            src="/sample3.jpg"
-            alt="Project 3"
-            className="rounded shadow-md object-cover h-60 w-full"
-            data-aos="flip-left"
-            data-aos-delay="1300"
-          />
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {[
+            { src: "/src/assets/project1.jpg", alt: "Project 1", delay: 1100 },
+            { src: "/src/assets/project2.jpeg", alt: "Project 2", delay: 1200 },
+            { src: "/src/assets/project3.jpeg", alt: "Project 3", delay: 1300 },
+            { src: "/src/assets/project4.jpeg", alt: "Project 4", delay: 1400 },
+            { src: "/src/assets/project5.jpeg", alt: "Project 5", delay: 1500 },
+            { src: "/src/assets/project6.jpeg", alt: "Project 6", delay: 1600 },
+            { src: "/src/assets/project7.jpeg", alt: "Project 7", delay: 1700 },
+            { src: "/src/assets/project8.jpg", alt: "Project 8", delay: 1800 },
+            { src: "/src/assets/project9.jpeg", alt: "Project 9", delay: 1900 },
+          ].map((project, index) => (
+            <div
+              key={index}
+              className="overflow-hidden rounded shadow-md transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out"
+              data-aos="flip-left"
+              data-aos-delay={project.delay}
+            >
+              <img
+                src={project.src}
+                alt={project.alt}
+                className="object-cover w-full h-60"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
