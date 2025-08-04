@@ -81,7 +81,7 @@ const Home = () => {
               data-aos="zoom-in"
               data-aos-delay={700 + index * 100}
             >
-              <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+              <h4 className="text-xl font-semibold text-red-600 mb-2">
                 {service.title}
               </h4>
 
