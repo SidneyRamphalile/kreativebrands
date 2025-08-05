@@ -105,10 +105,11 @@ const Navbar = () => {
         { name: "Wraps", path: "/wraps" },
       ],
     },
-    {
-      title: "Shop",
-      url: "https://cemeqp-iu.myshopify.com/",
-    },
+    // For now, I am disabling the shop link because it is not yet ready and THIS website must go Live very soon.
+    // {
+    //   title: "Shop",
+    //   url: "https://cemeqp-iu.myshopify.com/",
+    // },
     {
       title: "Contact Us",
     },
