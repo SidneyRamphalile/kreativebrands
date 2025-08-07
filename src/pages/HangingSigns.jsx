@@ -4,12 +4,18 @@ import { Link } from "react-router-dom";
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
   "/banners",
-  "/flyers",
-  "/signboards",
-  "/posters",
+  "/pylon-signs",
+  "/wall-mounted-signs",
+  "/monument-signs",
   "/stickers",
+  "/shopfront-signage",
+  "/3d-lettering",
+  "/lightboxes",
+  "/led-digital-signs",
+  "/wall-murals-vinyl-decals",
+  "/directory-signs",
+  "/acrylic-glass-mounted-office-signs",
 ];
-
 const getRandomSuggestions = (currentPath) => {
   const filtered = productSuggestions.filter((path) => path !== currentPath);
   const shuffled = filtered.sort(() => 0.5 - Math.random());

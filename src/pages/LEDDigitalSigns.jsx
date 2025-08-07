@@ -1,21 +1,20 @@
-// import React from "react";
-// const LEDDigitalSigns = () => (
-//   <div className="p-4 max-w-4xl mx-auto">
-//     <h1 className="text-3xl font-bold">LED digital signs</h1>
-//   </div>
-// );
-// export default LEDDigitalSigns;
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
   "/banners",
-  "/flyers",
-  "/signboards",
-  "/posters",
+  "/pylon-signs",
+  "/wall-mounted-signs",
+  "/monument-signs",
   "/stickers",
+  "/shopfront-signage",
+  "/3d-lettering",
+  "/lightboxes",
+  "/vinyl-lettering",
+  "/wall-murals-vinyl-decals",
+  "/directory-signs",
+  "/acrylic-glass-mounted-office-signs",
 ];
 
 const getRandomSuggestions = (currentPath) => {
