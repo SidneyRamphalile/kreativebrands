@@ -59,6 +59,7 @@ const Home = () => {
 
       {/* Services Section */}
       <div
+        id="services"
         className="px-4 py-10 bg-white text-center"
         data-aos="fade-up"
         data-aos-delay="600"
@@ -101,6 +102,7 @@ const Home = () => {
 
       {/* Portfolio Section */}
       <div
+        id="portfolio"
         className="px-4 py-10 bg-gray-50 text-center"
         data-aos="fade-up"
         data-aos-delay="1000"

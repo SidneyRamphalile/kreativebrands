@@ -5,11 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import WhatsappButton from "./components/WhatsappButton";
 import Footer from "./components/Footer";
 import ContactUsPage from "./pages/ContactUs";
-
-
 
 // Outdoor Signage
 import Billboards from "./pages/Billboards";
@@ -51,6 +50,8 @@ import Banners from "./pages/Banners";
 import Wallpapers from "./pages/Wallpapers";
 import Wraps from "./pages/Wraps";
 
+import ScrollToHashElement from "./components/ScrollToHashElement";
+
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -65,6 +66,9 @@ const App = () => {
         <Routes>
           {/* Home */}
           <Route path="/" element={<Home />} />
+
+          {/* About US */}
+          <Route path="/about" element={<About />} />
 
           {/* Outdoor Signage */}
           <Route path="/billboards" element={<Billboards />} />
@@ -124,8 +128,12 @@ const App = () => {
           <Route path="/wallpapers" element={<Wallpapers />} />
           <Route path="/wraps" element={<Wraps />} />
 
+          {/* Contact */}
           <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
+
+        {/* This handles smooth scrolling on hash changes */}
+        <ScrollToHashElement />
 
         <WhatsappButton />
         <Footer />
