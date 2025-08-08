@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import contraVisionDecalsImage from "../assets/Print-Smith-Contravision-One-Way-Vinyl-Stickers-for-Glass-Windows.jpg"; 
  
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -35,7 +36,7 @@ const ContraVisionDecals = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/contra-vision-decals.jpg"
+            src={contraVisionDecalsImage}
             alt="Contra-Vision Decals"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />
