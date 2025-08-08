@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layout/MainLayout";
@@ -63,6 +64,7 @@ const App = () => {
   return (
     <Router>
       <MainLayout>
+        <ScrollToTop />
         <Routes>
           {/* Home */}
           <Route path="/" element={<Home />} />

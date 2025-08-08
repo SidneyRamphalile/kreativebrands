@@ -105,11 +105,6 @@ const Navbar = () => {
         { name: "Wraps", path: "/wraps" },
       ],
     },
-    // For now, I am disabling the shop link because it is not yet ready and THIS website must go Live very soon.
-    // {
-    //   title: "Shop",
-    //   url: "https://cemeqp-iu.myshopify.com/",
-    // },
     {
       title: "Contact Us",
     },
@@ -126,29 +121,66 @@ const Navbar = () => {
     }
   };
 
+  // Navigate to contact page when "Request a Quote" clicked
+  const handleRequestQuote = () => {
+    navigate("/contact");
+  };
+
   return (
     <nav className="bg-gray-900 text-white px-4 py-3 shadow-md">
-      <div className="max-w-7xl mx-auto flex flex-col space-y-4">
-        {/* Top Row: Logo + Social Icons + Hamburger */}
-        <div className="w-full flex justify-between items-center">
-          <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to="/" onClick={() => setOpenMenu(false)}>
-              <img
-                src={logo}
-                alt="Kreativ Design Logo"
-                className="h-10 w-auto"
-              />
-            </Link>
+      <style>
+        {`
+          @keyframes glow {
+            0%, 100% {
+              box-shadow:
+                0 0 5px #f87171,
+                0 0 10px #f87171,
+                0 0 20px #ef4444,
+                0 0 30px #dc2626,
+                0 0 40px #b91c1c,
+                0 0 50px #991b1b,
+                0 0 60px #7f1d1d;
+            }
+            50% {
+              box-shadow:
+                0 0 10px #f87171,
+                0 0 20px #ef4444,
+                0 0 30px #dc2626,
+                0 0 40px #b91c1c,
+                0 0 50px #991b1b,
+                0 0 60px #7f1d1d,
+                0 0 70px #7f1d1d;
+            }
+          }
+        `}
+      </style>
 
-            {/* Hamburger (mobile only) */}
-            <button
-              onClick={() => setOpenMenu(!openMenu)}
-              className="md:hidden text-2xl text-white"
-              aria-label="Toggle menu"
-            >
-              ☰
-            </button>
-          </div>
+      <div className="max-w-7xl mx-auto flex flex-col space-y-4">
+        {/* Top Row: Logo + Request Quote Button + Social Icons + Hamburger */}
+        <div className="w-full flex justify-between items-center space-x-6">
+          <Link
+            to="/"
+            onClick={() => setOpenMenu(false)}
+            className="flex-shrink-0"
+          >
+            <img src={logo} alt="Kreativ Design Logo" className="h-10 w-auto" />
+          </Link>
+
+          {/* Request a Quote Button */}
+          <button
+            onClick={handleRequestQuote}
+            className="hidden md:inline-block bg-red-600 text-white font-semibold rounded-full px-5 py-2 text-lg
+              hover:bg-red-700
+              focus:outline-none
+              animate-glow"
+            style={{
+              animation: "glow 2.5s ease-in-out infinite",
+              boxShadow: "0 0 10px #ef4444, 0 0 20px #dc2626, 0 0 30px #b91c1c",
+            }}
+            aria-label="Request a Quote"
+          >
+            Request a Quote
+          </button>
 
           {/* Social Media Icons (hidden on mobile) */}
           <div className="hidden md:flex items-center space-x-4">
@@ -185,6 +217,15 @@ const Navbar = () => {
               <FaLinkedinIn />
             </a>
           </div>
+
+          {/* Hamburger (mobile only) */}
+          <button
+            onClick={() => setOpenMenu(!openMenu)}
+            className="md:hidden text-2xl text-white"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
         </div>
 
         {/* Desktop Nav Items */}
