@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import VinylLetteringImage from "../assets/Vinyl lettering.jpg";
+
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +38,7 @@ const VinylLettering = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/vinyl-lettering.jpg"
+            src={VinylLetteringImage}
             alt="Vinyl Lettering"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

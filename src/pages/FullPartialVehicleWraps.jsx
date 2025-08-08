@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FullPartialVehicleWrapsImage from "../assets/Full or partial vehicle wraps.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -35,7 +36,7 @@ const FullPartialVehicleWraps = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/vehicle-wraps.jpg"
+            src={FullPartialVehicleWrapsImage}
             alt="Full or Partial Vehicle Wraps"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

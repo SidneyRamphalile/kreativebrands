@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import frostedVynalImage from "../assets/Frosted window vinyl.jpg"; 
+
 
 // Product paths for dynamic linking
 const productSuggestions = [
@@ -38,7 +40,7 @@ const FrostedVinyl = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/frosted-vinyl.jpg"
+            src={frostedVynalImage}
             alt="Frosted Vinyl"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

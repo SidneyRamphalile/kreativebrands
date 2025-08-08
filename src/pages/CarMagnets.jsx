@@ -35,7 +35,7 @@ const CarMagnets = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/car-magnets.jpg"
+            src="/src/assets/Car magnets.jpg"
             alt="Car Magnets"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

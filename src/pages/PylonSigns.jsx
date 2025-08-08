@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PylonSignsImage from "../assets/Pylon signs.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -35,7 +36,7 @@ const PylonSigns = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/pylon-signs.jpg"
+            src={PylonSignsImage}
             alt="Pylon Signs"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

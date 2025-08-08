@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+ 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
   "/banners",

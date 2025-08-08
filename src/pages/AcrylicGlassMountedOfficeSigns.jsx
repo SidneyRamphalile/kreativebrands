@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import acrylicImage from "../assets/Acrylic or glass-mounted office signs.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -14,7 +15,6 @@ const productSuggestions = [
   "/led-digital-signs",
   "/wall-murals-vinyl-decals",
   "/directory-signs",
-  "/frosted-window-vinyl",
 ];
 
 const getRandomSuggestions = (currentPath) => {
@@ -40,7 +40,7 @@ const AcrylicGlassMountedOfficeSigns = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/acrylic-office-sign.jpg"
+            src={acrylicImage}
             alt="Acrylic or Glass-Mounted Office Signs"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

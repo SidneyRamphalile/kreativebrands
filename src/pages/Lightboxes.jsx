@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import lightboxes from "../assets/Lightboxes.jpeg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const Lightboxes = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/lightboxes.jpg"
+            src={lightboxes}
             alt="Lightboxes"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

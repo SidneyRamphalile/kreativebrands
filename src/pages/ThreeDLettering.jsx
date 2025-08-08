@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ThreeDLetteringImage from "../assets/3D Lettering.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -37,7 +38,7 @@ const ThreeDLettering = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/3d-lettering.jpg"
+            src={ThreeDLetteringImage}
             alt="3D Lettering"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import vinylcutdecals from "../assets/Cut-Vinyl-Custom-shape-cut.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -35,7 +36,7 @@ const VinylCutDecals = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/vinylcut.jpg"
+            src={vinylcutdecals}
             alt="Vinyl Cut Decals"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import receptionsigns from "../assets/Reception signs.jpeg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const ReceptionSigns = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/receptionsigns.jpg"
+            src={receptionsigns}
             alt="Reception Signs"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />
@@ -63,7 +64,7 @@ const ReceptionSigns = () => {
           professional first impression for your clients and visitors. Crafted
           using premium materials such as acrylic, brushed aluminum, PVC, or
           glass, each sign is custom-made to reflect your brand identity.
-          Whether it’s for a corporate office, medical practice, or retail
+          Whether it's for a corporate office, medical practice, or retail
           space, we offer sleek, stylish, and durable signage that enhances the
           overall look and feel of your reception area. From logo displays to
           directional signage, we ensure every detail communicates trust and

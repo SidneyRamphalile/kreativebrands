@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FleetBrandingImage from "../assets/Fleet branding.jpg"; 
 
 // Dynamic product suggestions, excluding current page
 const productSuggestions = [
@@ -35,7 +36,7 @@ const FleetBranding = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/fleet-branding.jpg"
+            src={FleetBrandingImage}
             alt="Fleet branding vehicle wrap"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

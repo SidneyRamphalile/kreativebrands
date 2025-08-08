@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pvc from "../assets/colorful-vinyl-banner-mockup-wall_460064-214.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const PVC = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/pvc.jpg"
+            src={pvc}
             alt="PVC Banners"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

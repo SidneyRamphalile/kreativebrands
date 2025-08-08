@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import wallMuralsImage from "../assets/Wall murals & vinyl decals 2.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const WallMuralsVinylDecals = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/wall-murals.jpg"
+            src={wallMuralsImage}
             alt="Wall Murals and Vinyl Decals"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

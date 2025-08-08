@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import stickers from "../assets/JW4ylM7PgQKCS5viovLH8OqQ.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const Stickers = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/stickers.jpg"
+            src={stickers}
             alt="Stickers"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

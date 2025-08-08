@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import monumentSignsImage from "../assets/Monument signs.jpg";
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const MonumentSigns = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/monumentsigns.jpg"
+            src={monumentSignsImage}
             alt="Monument Signs"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

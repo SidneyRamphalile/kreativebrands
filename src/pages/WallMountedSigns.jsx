@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WallMountedSignsImage from "../assets/Wall-mounted signs.webp"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -36,7 +37,7 @@ const WallMountedSigns = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/wall-mounted-signs.jpg"
+            src={WallMountedSignsImage}
             alt="Wall-mounted signs"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

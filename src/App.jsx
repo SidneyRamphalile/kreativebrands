@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 
 import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
@@ -20,7 +21,6 @@ import ShopfrontSignage from "./pages/ShopfrontSignage";
 import ThreeDLettering from "./pages/ThreeDLettering";
 import Lightboxes from "./pages/Lightboxes";
 import LEDDigitalSigns from "./pages/LEDDigitalSigns";
-import BannerSigns from "./pages/BannerSigns";
 
 // Indoor Signage
 import ReceptionSigns from "./pages/ReceptionSigns";
@@ -28,7 +28,6 @@ import WallMuralsVinylDecals from "./pages/WallMuralsVinylDecals";
 import DirectorySigns from "./pages/DirectorySigns";
 import WayfindingSignage from "./pages/WayfindingSignage";
 import AcrylicGlassMountedOfficeSigns from "./pages/AcrylicGlassMountedOfficeSigns";
-import FrostedWindowVinyl from "./pages/FrostedWindowVinyl";
 import RetailPOSSignage from "./pages/RetailPOSSignage";
 import HangingSigns from "./pages/HangingSigns";
 
@@ -81,7 +80,6 @@ const App = () => {
           <Route path="/3d-lettering" element={<ThreeDLettering />} />
           <Route path="/lightboxes" element={<Lightboxes />} />
           <Route path="/led-digital-signs" element={<LEDDigitalSigns />} />
-          <Route path="/banner-signs" element={<BannerSigns />} />
 
           {/* Indoor Signage */}
           <Route path="/reception-signs" element={<ReceptionSigns />} />
@@ -94,10 +92,6 @@ const App = () => {
           <Route
             path="/acrylic-glass-mounted-office-signs"
             element={<AcrylicGlassMountedOfficeSigns />}
-          />
-          <Route
-            path="/frosted-window-vinyl"
-            element={<FrostedWindowVinyl />}
           />
           <Route path="/retail-pos-signage" element={<RetailPOSSignage />} />
           <Route path="/hanging-signs" element={<HangingSigns />} />
@@ -132,6 +126,9 @@ const App = () => {
 
           {/* Contact */}
           <Route path="/contact" element={<ContactUsPage />} />
+
+          {/* 404 Catch-All Route (must be last) */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         {/* This handles smooth scrolling on hash changes */}

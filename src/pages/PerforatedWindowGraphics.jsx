@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PerforatedWindowGraphicsImage from "../assets/Perforated window graphics.png"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -37,7 +38,7 @@ const PerforatedWindowGraphics = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/perforated-window-graphics.jpg" // Make sure this image exists
+            src={PerforatedWindowGraphicsImage}
             alt="Perforated Window Graphics"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

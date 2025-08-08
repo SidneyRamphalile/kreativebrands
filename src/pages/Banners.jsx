@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import banners from "../assets/Banner signs.jpg"; 
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -35,7 +36,7 @@ const Banners = () => {
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/banners.jpg"
+            src={banners}
             alt="Banners"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />

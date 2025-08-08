@@ -49,7 +49,6 @@ const Navbar = () => {
         { name: "3D Lettering (Acrylic, Metal, PVC)", path: "/3d-lettering" },
         { name: "Lightboxes", path: "/lightboxes" },
         { name: "LED digital signs", path: "/led-digital-signs" },
-        { name: "Banner signs (PVC, mesh, fabric)", path: "/banner-signs" },
       ],
     },
     {
@@ -66,7 +65,6 @@ const Navbar = () => {
           name: "Acrylic or glass-mounted office signs",
           path: "/acrylic-glass-mounted-office-signs",
         },
-        { name: "Frosted window vinyl", path: "/frosted-window-vinyl" },
         { name: "Retail point-of-sale signage", path: "/retail-pos-signage" },
         { name: "Hanging signs (suspended)", path: "/hanging-signs" },
       ],
