@@ -5,6 +5,9 @@ import {
   FaInstagram,
   FaTiktok,
   FaLinkedinIn,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import logo from "../assets/Kreativ-Logo.png";
 
@@ -12,7 +15,8 @@ const Footer = () => {
   return (
     <div className="w-full overflow-hidden bg-gray-900 text-white">
       <footer className="px-6 py-10 max-w-screen-2xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        {/* Change grid-cols-4 to grid-cols-5 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
           {/* Logo and Description */}
           <div>
             <img src={logo} alt="Kreativ Logo" className="h-12 mb-4" />
@@ -113,6 +117,42 @@ const Footer = () => {
                 <FaLinkedinIn />
               </a>
             </div>
+          </div>
+
+          {/* New Contact Info Column */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <ul className="space-y-4 text-sm text-gray-300">
+              <li className="flex items-center">
+                <FaPhoneAlt className="mr-3 text-red-500" />
+                <a href="tel:+27696684616" className="hover:text-red-500">
+                  +27 69 668 4616
+                </a>
+              </li>
+              <li className="flex items-center">
+                <FaEnvelope className="mr-3 text-red-500" />
+                <a
+                  href="mailto:info@kreativebrands.co.za"
+                  className="hover:text-red-500"
+                >
+                  info@kreativebrands.co.za
+                </a>
+              </li>
+              <li className="flex items-start">
+                <FaMapMarkerAlt className="mr-3 mt-1 text-red-500" />
+                <address className="not-italic">
+                  63 Aliwal Street
+                  <br />
+                  Opposite VW
+                  <br />
+                   Shop 1 Inez Court
+                  <br />
+                  Bloemfontein
+                  <br />
+                  9301
+                </address>
+              </li>
+            </ul>
           </div>
         </div>
 
