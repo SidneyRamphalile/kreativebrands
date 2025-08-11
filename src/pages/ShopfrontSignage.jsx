@@ -89,7 +89,7 @@ const ShopfrontSignage = () => {
             <Link
               to={path}
               key={index}
-              className="block border p-4 rounded-lg hover:shadow transition"
+              className="block border p-4 rounded-lg hover:shadow hover:border-red-600 hover:text-red-600 hover:bg-red-50 transition"
             >
               <h4 className="text-lg font-semibold capitalize">
                 {path.replace("/", "")}
