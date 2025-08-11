@@ -40,10 +40,15 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
+              {/* Profile download link */}
               <li>
-                <Link to="/#portfolio" className="hover:text-red-500">
-                  Portfolio
-                </Link>
+                <a
+                  href="/Kreativ-Design-Profile.pdf"
+                  download="Kreativ-Design-Profile.pdf"
+                  className="hover:text-red-500"
+                >
+                  Profile
+                </a>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-red-500">
@@ -145,7 +150,7 @@ const Footer = () => {
                   <br />
                   Opposite VW
                   <br />
-                   Shop 1 Inez Court
+                  Shop 1 Inez Court
                   <br />
                   Bloemfontein
                   <br />
