@@ -59,7 +59,7 @@ const Wraps = () => {
       <div className="mb-6">
         <h3 className="text-2xl font-bold mb-3">Product Description</h3>
         <p className="text-gray-700 leading-relaxed">
-          Our gift wrapping paper is perfect for any occasion—from birthdays to
+          Our gift wrapping paper is perfect for any occasion - from birthdays to
           holidays and corporate gifting. Crafted with high-quality materials,
           these wraps feature vibrant designs and durable finishes that make
           your gifts look stunning. Whether you want classic patterns or custom
