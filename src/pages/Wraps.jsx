@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import wraps from "../assets/free-gift-wrapping-paper-mockup-2.jpg"; 
+import wraps from "../assets/free-gift-wrapping-paper-mockup-2.jpg";
 
 // Array of your existing product routes for dynamic linking
 const productSuggestions = [
@@ -38,7 +38,7 @@ const Wraps = () => {
         <div className="w-full md:w-1/2">
           <img
             src={wraps}
-            alt="Vehicle Wraps"
+            alt="Gift Wrapping Paper"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />
         </div>
@@ -46,11 +46,11 @@ const Wraps = () => {
         {/* Short Description */}
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-xl font-semibold mb-2">
-            Eye-catching vehicle branding
+            Beautiful and customizable gift wraps
           </h2>
           <p className="text-gray-700">
-            Transform your vehicles into mobile billboards with high-quality,
-            durable wraps customized to showcase your brand wherever you go.
+            Add a special touch to your gifts with our premium quality wrapping
+            paper, available in a variety of patterns and finishes.
           </p>
         </div>
       </div>
@@ -59,13 +59,12 @@ const Wraps = () => {
       <div className="mb-6">
         <h3 className="text-2xl font-bold mb-3">Product Description</h3>
         <p className="text-gray-700 leading-relaxed">
-          Our vehicle wraps offer a dynamic way to promote your business on the
-          move. Made from premium vinyl, these wraps are weather-resistant, easy
-          to maintain, and fully customizable to fit any vehicle size or shape.
-          Whether you want a full wrap or a partial design, we deliver vibrant
-          colors and crisp graphics that turn heads and generate buzz. Ideal for
-          business fleets, delivery vehicles, or personal cars, our wraps help
-          you build brand awareness everywhere you drive.
+          Our gift wrapping paper is perfect for any occasion—from birthdays to
+          holidays and corporate gifting. Crafted with high-quality materials,
+          these wraps feature vibrant designs and durable finishes that make
+          your gifts look stunning. Whether you want classic patterns or custom
+          prints with your branding, our wraps ensure your presents stand out
+          with elegance and style.
         </p>
       </div>
 
