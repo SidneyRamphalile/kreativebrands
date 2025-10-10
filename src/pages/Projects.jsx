@@ -4,11 +4,19 @@ import React from "react";
 import projectA from "../assets/projectA.jpg";
 import projectB from "../assets/projectB.jpg";
 import projectC from "../assets/projectC.jpg";
-import projectD from "../assets/projectD.jpg";
-import projectE from "../assets/projectE.jpg";
-import projectF from "../assets/projectF.jpg";
+import project1 from "../assets/project1.jpg";
+import project2 from "../assets/project2.jpeg";
+import project3 from "../assets/project3.jpeg";
+import project4 from "../assets/project4.jpeg";
+import project5 from "../assets/project5.jpeg";
+import project6 from "../assets/project6.jpeg";
+import project7 from "../assets/project7.jpeg";
+import project8 from "../assets/project8.jpg";
+import project9 from "../assets/project9.jpeg";
+    
 
-const projectImages = [projectA, projectB, projectC, projectD, projectE, projectF]; 
+
+const projectImages = [projectA, projectB, projectC, project1, project2, project3, project4, project5, project6, project7, project8, project9]; 
 
 const Projects = () => {
   return (
