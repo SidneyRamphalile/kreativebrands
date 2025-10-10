@@ -13,10 +13,21 @@ import project6 from "../assets/project6.jpeg";
 import project7 from "../assets/project7.jpeg";
 import project8 from "../assets/project8.jpg";
 import project9 from "../assets/project9.jpeg";
-    
 
-
-const projectImages = [projectA, projectB, projectC, project1, project2, project3, project4, project5, project6, project7, project8, project9]; 
+const projectImages = [
+  projectA,
+  projectB,
+  projectC,
+  project1,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
+  project7,
+  project8,
+  project9,
+];
 
 const Projects = () => {
   return (
@@ -30,13 +41,17 @@ const Projects = () => {
       </p>
 
       {/* Grid */}
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
         {projectImages.map((image, index) => (
-          <div key={index} className="w-full overflow-hidden rounded-lg">
+          <div
+            key={index}
+            className="w-full overflow-hidden rounded-xl shadow-lg"
+            style={{ height: "250px" }} // Bigger uniform height
+          >
             <img
               src={image}
               alt={`Project ${index + 1}`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
