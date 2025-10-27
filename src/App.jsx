@@ -49,7 +49,6 @@ import PVC from "./pages/PVC";
 import Stickers from "./pages/Stickers";
 import Banners from "./pages/Banners";
 import Wallpapers from "./pages/Wallpapers";
-import Wraps from "./pages/Wraps";
 
 import ScrollToHashElement from "./components/ScrollToHashElement";
 
@@ -123,7 +122,6 @@ const App = () => {
           <Route path="/stickers" element={<Stickers />} />
           <Route path="/banners" element={<Banners />} />
           <Route path="/wallpapers" element={<Wallpapers />} />
-          <Route path="/wraps" element={<Wraps />} />
 
           {/* Projects */}
           <Route path="/projects" element={<Projects />} />

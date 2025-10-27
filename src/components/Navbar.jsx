@@ -99,7 +99,6 @@ const Navbar = () => {
         { name: "Stickers", path: "/stickers" },
         { name: "Banners", path: "/banners" },
         { name: "Wallpapers", path: "/wallpapers" },
-        { name: "Wraps", path: "/wraps" },
       ],
     },
     { title: "Our Projects", path: "/projects" }, // ✅ added here
