@@ -52,8 +52,8 @@ const HeroCarousel = () => {
     let scroll = 0;
     let req;
 
-    // Duplicate all slides for seamless scroll
-    const totalWidth = Array.from(container.children)
+    // Calculate width of one set of slides (original only)
+    const singleSetWidth = Array.from(container.children)
       .slice(0, slides.length)
       .reduce(
         (acc, el) =>
@@ -67,9 +67,13 @@ const HeroCarousel = () => {
 
     const animate = () => {
       scroll += speed;
-      if (scroll >= totalWidth) {
-        scroll = 0; // reset scroll after full loop
+
+      // Reset scroll when we've scrolled exactly one set of images
+      // This creates seamless looping
+      if (scroll >= singleSetWidth) {
+        scroll = 0;
       }
+
       container.style.transform = `translateX(-${scroll}px)`;
       req = requestAnimationFrame(animate);
     };
@@ -86,7 +90,7 @@ const HeroCarousel = () => {
           <img
             key={idx}
             src={img}
-            alt={`hero-${idx}`}
+            alt={`hero-${idx % slides.length}`} // Better alt text
             className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] mr-4 flex-none object-contain"
           />
         ))}
@@ -96,9 +100,6 @@ const HeroCarousel = () => {
 };
 
 export default HeroCarousel;
-
-
-
 
 
 

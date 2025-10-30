@@ -4,16 +4,3 @@
 html, body {
   overflow-x: hidden;
 }
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* scroll exactly one set of images */
-}
-
-/* Optional: smooth hardware-accelerated animation */
-.marquee {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  animation-timing-function: linear;
-}
