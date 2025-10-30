@@ -35,7 +35,7 @@
 
 // export default HeroCarousel;
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import hero1 from "../assets/hero1A.jpg";
 import hero2 from "../assets/hero2B.jpg";
 import hero3 from "../assets/hero3C.jpg";
@@ -46,42 +46,42 @@ const slides = [hero1, hero2, hero3, hero4, hero5];
 
 const HeroCarousel = () => {
   const containerRef = useRef(null);
-  const [scrollWidth, setScrollWidth] = useState(0);
 
   useEffect(() => {
-    if (containerRef.current) {
-      // Measure total width of first set of images including margins
-      const firstSet = Array.from(containerRef.current.children).slice(
-        0,
-        slides.length
-      );
-      const width = firstSet.reduce(
+    const container = containerRef.current;
+    let scroll = 0;
+    let req;
+
+    // Duplicate all slides for seamless scroll
+    const totalWidth = Array.from(container.children)
+      .slice(0, slides.length)
+      .reduce(
         (acc, el) =>
           acc +
           el.offsetWidth +
           parseInt(getComputedStyle(el).marginRight || 0),
         0
       );
-      setScrollWidth(width);
-    }
-  }, []);
 
-  // Scroll speed in pixels/sec (adjust as needed)
-  const speed = 50;
-  const duration = scrollWidth / speed;
+    const speed = 0.5; // pixels per frame, adjust for speed
+
+    const animate = () => {
+      scroll += speed;
+      if (scroll >= totalWidth) {
+        scroll = 0; // reset scroll after full loop
+      }
+      container.style.transform = `translateX(-${scroll}px)`;
+      req = requestAnimationFrame(animate);
+    };
+
+    req = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(req);
+  }, []);
 
   return (
     <section className="w-full overflow-hidden">
-      <div
-        ref={containerRef}
-        className="flex"
-        style={{
-          animation: scrollWidth
-            ? `marquee ${duration}s linear infinite`
-            : "none",
-        }}
-      >
-        {/* Duplicate slides for seamless scroll */}
+      <div ref={containerRef} className="flex">
         {[...slides, ...slides].map((img, idx) => (
           <img
             key={idx}
