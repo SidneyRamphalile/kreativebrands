@@ -46,44 +46,48 @@ const slides = [hero1, hero2, hero3, hero4, hero5];
 
 const HeroCarousel = () => {
   const containerRef = useRef(null);
-  const [scrollDistance, setScrollDistance] = useState(0);
+  const [scrollWidth, setScrollWidth] = useState(0);
 
   useEffect(() => {
     if (containerRef.current) {
+      // Measure total width of first set of images including margins
       const firstSet = Array.from(containerRef.current.children).slice(
         0,
         slides.length
       );
-      const totalWidth = firstSet.reduce(
+      const width = firstSet.reduce(
         (acc, el) =>
-          acc + el.offsetWidth + parseInt(getComputedStyle(el).marginRight),
+          acc +
+          el.offsetWidth +
+          parseInt(getComputedStyle(el).marginRight || 0),
         0
       );
-      setScrollDistance(totalWidth);
+      setScrollWidth(width);
     }
   }, []);
 
-  // Scroll speed in px/sec
-  const speed = 100; // adjust as needed
-  const duration = scrollDistance / speed;
+  // Scroll speed in pixels/sec (adjust as needed)
+  const speed = 50;
+  const duration = scrollWidth / speed;
 
   return (
-    <section className="w-full overflow-hidden py-4">
+    <section className="w-full overflow-hidden">
       <div
         ref={containerRef}
         className="flex"
         style={{
-          animation: scrollDistance
+          animation: scrollWidth
             ? `marquee ${duration}s linear infinite`
             : "none",
         }}
       >
+        {/* Duplicate slides for seamless scroll */}
         {[...slides, ...slides].map((img, idx) => (
           <img
             key={idx}
             src={img}
             alt={`hero-${idx}`}
-            className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] mr-4 flex-none"
+            className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] mr-4 flex-none object-contain"
           />
         ))}
       </div>
@@ -92,6 +96,8 @@ const HeroCarousel = () => {
 };
 
 export default HeroCarousel;
+
+
 
 
 
