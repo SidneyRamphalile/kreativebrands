@@ -5,14 +5,53 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Marquee container */
 .marquee {
+  display: flex;             /* line up images horizontally */
+  flex-wrap: nowrap;         /* prevent wrapping to next line */
+  overflow: hidden;          /* hide overflowing images */
+}
+
+/* Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* scroll exactly one set of images */
+  }
+}
+
+/* Apply the animation dynamically from inline style in React */
+.animate-marquee {
   display: flex;
   flex-wrap: nowrap;
-  animation: marquee 20s linear infinite;
+  /* animation: marquee 20s linear infinite; */
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* scroll one full set of images */
+/* Images */
+.marquee img {
+  flex: none;                /* preserve original width */
+  height: 200px;             /* base height for mobile */
+  margin-right: 16px;        /* spacing between images */
+  object-fit: cover;         /* fill container while preserving ratio */
 }
 
+/* Responsive heights */
+@media (min-width: 640px) {
+  .marquee img {
+    height: 250px;           /* small tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  .marquee img {
+    height: 300px;           /* desktops */
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee img {
+    height: 350px;           /* large screens */
+  }
+}
