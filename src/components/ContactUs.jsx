@@ -190,6 +190,7 @@ const ContactUs = () => {
                 href="https://www.facebook.com/profile.php?id=61578710158593"
                 className="text-blue-600"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Facebook
               </a>{" "}
@@ -198,6 +199,7 @@ const ContactUs = () => {
                 href="https://www.instagram.com/kreativdesign_print/"
                 className="text-pink-500"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Instagram
               </a>
@@ -206,7 +208,7 @@ const ContactUs = () => {
           <div className="h-80">
             <iframe
               title="Kreativ Design & Print Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.0569742687317!2d26.2192425!3d-29.1123284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8fc55cff331189%3A0x2365777c82848f8!2sKreativ%20Design%20%26%20Print!5e1!3m2!1sen!2sza!4v1761555379800!5m2!1sen!2sza"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.271619246753!2d26.21924247600838!3d-29.11232836971844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8fc55cff331189%3A0x2365777c82848f8!2sKreativ%20Design%20%26%20Print!5e0!3m2!1sen!2sza!4v1696270400000!5m2!1sen!2sza"
               width="100%"
               height="100%"
               style={{ border: 0 }}
