@@ -102,6 +102,7 @@ const Navbar = () => {
       ],
     },
     { title: "Our Projects", path: "/projects" }, // ✅ added here
+    { title: "Websites", path: "/websites" },
     { title: "Contact Us" },
   ];
 

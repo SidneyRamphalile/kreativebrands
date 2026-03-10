@@ -12,6 +12,8 @@ import WhatsappButton from "./components/WhatsappButton";
 import Footer from "./components/Footer";
 import ContactUsPage from "./pages/ContactUs";
 import Projects from "./pages/Projects";
+import Websites from "./pages/Websites";
+
 
 // Outdoor Signage
 import Billboards from "./pages/Billboards";
@@ -125,6 +127,10 @@ const App = () => {
 
           {/* Projects */}
           <Route path="/projects" element={<Projects />} />
+
+          {/* Websites */}
+          <Route path="/websites" element={<Websites />} />
+
 
           {/* Contact */}
           <Route path="/contact" element={<ContactUsPage />} />
